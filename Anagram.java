@@ -10,7 +10,6 @@ public class Anagram {
     }
 
     private static void printAnagrams(String[] arr) {
-        // to keep track of
         Map<Integer, List<String>> map = new HashMap<>();
 
         for (int i = 0; i < arr.length; i++) {
