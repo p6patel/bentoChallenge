@@ -12,7 +12,7 @@ public class Anagram {
     private static void printAnagrams(String[] arr) {
         Map<Integer, List<String>> map = new HashMap<>();
 
-        for (int i = 0; i < arr.length; i++) {
+        for ( int i = 0; i < arr.length; i++ ) {
             // break down each word into char[] and sort
             char[] letters = arr[i].toCharArray();
             Arrays.sort(letters);
@@ -38,7 +38,7 @@ public class Anagram {
             }
         }
 
-        for(Integer i : map.keySet() ) {
+        for( Integer i : map.keySet() ) {
             // if more than one value maps to any key, we have anagrams
             if ( map.get(i).size() > 1 ) {
                 System.out.println(map.get(i));

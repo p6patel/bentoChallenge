@@ -20,9 +20,9 @@ public class Files {
         File start = new File(path);
         File[] list = start.listFiles();
 
-        for (File file : list) {
+        for ( File file : list ) {
             // if we come across a directory, recursively scan subdirectories
-            if (file.isDirectory()) {
+            if ( file.isDirectory() ) {
                 traverseDirectories(file.getAbsolutePath());
             }
             else {
@@ -50,10 +50,10 @@ public class Files {
         // sort keys by descending order
         Collections.sort(keys, Collections.reverseOrder());
 
-        for(long size : keys) {
+        for( long size : keys ) {
             // now that keys are sorted, can iterate thru the list to get all file paths in order of size
             ArrayList<String> filePaths = map.get(size);
-            for(String p : filePaths) {
+            for( String p : filePaths ) {
                 // print path and file size
                 System.out.println("PATH: " + p + ", SIZE: " + size);
             }
