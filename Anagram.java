@@ -30,7 +30,7 @@ public class Anagram {
                 anagrams.add(arr[i]);
                 map.put(hashCode, anagrams);
             }
-            // if it doesn't already exist, need to create list
+
             else {
                 List<String> anagrams = new ArrayList<>();
                 anagrams.add(arr[i]);
@@ -39,7 +39,7 @@ public class Anagram {
         }
 
         for(Integer i : map.keySet() ) {
-            // if a more than one value map to any key, means we have anagram
+            // if more than one value maps to any key, we have anagrams
             if ( map.get(i).size() > 1 ) {
                 System.out.println(map.get(i));
             }
